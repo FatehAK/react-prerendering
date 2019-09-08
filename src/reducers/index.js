@@ -7,7 +7,7 @@ const postsReducer = (state = [], action) => {
         default:
             return state;
     }
-}
+};
 
 export default combineReducers({
     posts: postsReducer
