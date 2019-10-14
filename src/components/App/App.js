@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import ReactGA from 'react-ga';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Home from '../Home/Home';
 import Contact from '../Contact/Contact';
@@ -25,7 +25,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <BrowserRouter history={history}>
+                <Router history={history}>
                     <Nav />
                     <Route exact path="/" render={() => (
                         <Home text="Home (from props)" />
@@ -36,7 +36,7 @@ class App extends React.Component {
                     <Route path="/about" render={() => (
                         <About text="About us (from props)" />
                     )} />
-                </BrowserRouter>
+                </Router>
             </div>
         );
     }
