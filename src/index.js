@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -24,17 +23,13 @@ const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
     ReactDOM.hydrate(
         <Provider store={store}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
+            <App />
         </Provider>,
         rootElement);
 } else {
     ReactDOM.render(
         <Provider store={store}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
+            <App />
         </Provider>,
         rootElement);
 }

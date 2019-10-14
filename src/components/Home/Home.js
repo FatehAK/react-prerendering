@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../actions/index';
@@ -15,6 +16,11 @@ class Home extends React.Component {
     }
 
     doSomething() {
+        ReactGA.event({
+            category: 'GENERAL_CLICK',
+            action: 'User clicked button',
+            label: 'HOME_PAGE'
+        });
         console.log('foo');
     }
 
