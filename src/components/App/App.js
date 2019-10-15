@@ -24,7 +24,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="app">
+            <>
                 <Router history={history}>
                     <Nav />
                     <Route exact path="/" render={() => (
@@ -37,7 +37,7 @@ class App extends React.Component {
                         <About text="About us (from props)" />
                     )} />
                 </Router>
-            </div>
+            </>
         );
     }
 }

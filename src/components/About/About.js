@@ -17,6 +17,7 @@ class About extends React.Component {
             label: 'ABOUT_PAGE'
         });
     }
+
     render() {
         return (
             <div className="about">
